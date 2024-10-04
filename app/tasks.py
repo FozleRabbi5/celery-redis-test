@@ -2,6 +2,7 @@ from app.celery_app import celery_app
 from app.mailing_system.mail_sending import celery_send_mail
 from pydantic import EmailStr
 
+
 # Example of a simple task
 @celery_app.task(name="app.tasks.add_numbers")
 def add_numbers(x: int, y: int) -> int:
